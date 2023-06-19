@@ -1,0 +1,40 @@
+import { Container, Row, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faAddressBook } from '@fortawesome/free-regular-svg-icons';
+import { faFacebook, faGooglePlus, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import dataIcons from './data/dataIconTopBar.json'
+
+const iconMap = {
+    faTwitter: faTwitter,
+    faFacebook: faFacebook,
+    faInstagram: faInstagram,
+    faGooglePlus: faGooglePlus,
+    faLinkedin: faLinkedin,
+};
+
+function TopBar() {
+
+    return (
+        <section id='top-bar'>
+            <Container fluid>
+                <Container fluid='lg'>
+                    <Row >
+                        <Col className='contact-info'>
+                            <span><FontAwesomeIcon icon={faEnvelope} /><a href='https://google.com'>contact@example.com</a></span>
+                            <span><FontAwesomeIcon icon={faAddressBook} />+1 5589 55488 55</span>
+                        </Col>
+                        <Col className='social-media'>
+                            {
+                                dataIcons.icons.map((data) => {
+                                    return <a key={data.id} href={data.href} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={iconMap[data.name]} /></a>
+                                })
+
+                            }
+                        </Col>
+                    </Row>
+                </Container>
+            </Container>
+        </section>
+    );
+}
+export default TopBar
