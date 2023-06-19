@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Col, Container, Row, Modal } from "react-bootstrap"
 import Slider from "react-slick"
 import dataImages from './data/dataImagesPortfolio.json'
@@ -6,17 +6,25 @@ import dataImages from './data/dataImagesPortfolio.json'
 const Portfolio = () => {
     const [showModal, setShowModal] = useState(false);
     const [sliderIndex, setSliderIndex] = useState(0);
-    useEffect(() => {
-        const containersPortfolio = document.querySelectorAll('#portfolio-images .col');
-        containersPortfolio.forEach(container => {
-            container.addEventListener('mouseover', (event) => {
-                container.querySelector('img').classList.add('hovered-portfolio-images');
-            })
-            container.addEventListener('mouseout', (event) => {
-                container.querySelector('img').classList.remove('hovered-portfolio-images');
-            })
+    const onceLoad = useRef(false)
 
-        });
+    useEffect(() => {
+        if (!onceLoad.current) {
+            const containersPortfolio = document.querySelectorAll('#portfolio-images .col');
+            console.log(containersPortfolio)
+            containersPortfolio.forEach(container => {
+                container.addEventListener('mouseover', (event) => {
+                    container.querySelector('img').classList.add('hovered-portfolio-images');
+                })
+                container.addEventListener('mouseout', (event) => {
+                    container.querySelector('img').classList.remove('hovered-portfolio-images');
+                })
+
+            });
+        }
+        return () => {
+            onceLoad.current = true
+        }
     }, [])
     function handleModalOpen(index) {
         setSliderIndex(index)
@@ -50,7 +58,7 @@ const Portfolio = () => {
                                     <img className="w-100" src={require(`${data.url}`)} alt={data.alt} />
                                     <div className="cover-portfolio-images" onClick={() => handleModalOpen(index)} >
                                         <div className="caption-portfolio-images">
-                                            <h2>Portfolio item 1</h2>
+                                            <h2>Portfolio item {index + 1}</h2>
                                         </div>
                                     </div>
                                 </Col>

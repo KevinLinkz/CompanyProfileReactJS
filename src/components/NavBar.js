@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 
 const NavBar = () => {
     const [showModal, setShowModal] = useState(false);
+
     const handleModalOpen = () => {
         window.addEventListener('scroll', handleScrollFixNavBar)
         setShowModal(true);
@@ -18,7 +19,6 @@ const NavBar = () => {
         var navBar = document.getElementById("navbar");
         var banner = document.getElementById("banner");
         var defaultActiveKey = document.querySelector(".defaultActiveKey")
-
         var navBarHeight = navBar.offsetHeight;
         var scrollPosition = window.scrollY;
 
