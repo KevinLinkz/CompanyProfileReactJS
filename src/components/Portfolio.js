@@ -11,7 +11,6 @@ const Portfolio = () => {
     useEffect(() => {
         if (!onceLoad.current) {
             const containersPortfolio = document.querySelectorAll('#portfolio-images .col');
-            console.log(containersPortfolio)
             containersPortfolio.forEach(container => {
                 container.addEventListener('mouseover', (event) => {
                     container.querySelector('img').classList.add('hovered-portfolio-images');
