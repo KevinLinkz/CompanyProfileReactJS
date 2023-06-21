@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CompanyProfileReactJS/static/css/main.bee844c0.css",
-    "main.js": "/CompanyProfileReactJS/static/js/main.32045cce.js",
+    "main.css": "/CompanyProfileReactJS/static/css/main.f9e89b96.css",
+    "main.js": "/CompanyProfileReactJS/static/js/main.cad8850e.js",
     "static/media/2.jpg": "/CompanyProfileReactJS/static/media/2.ccaf5af647e226555ac7.jpg",
     "static/media/3.jpg": "/CompanyProfileReactJS/static/media/3.0b39efe5fe3bcd967cf9.jpg",
     "static/media/4.jpg": "/CompanyProfileReactJS/static/media/4.df56acea51c9ad04c197.jpg",
@@ -21,11 +21,11 @@
     "static/media/team-3.jpg": "/CompanyProfileReactJS/static/media/team-3.5cb03b4b4fa4dd8ffe7c.jpg",
     "static/media/team-1.jpg": "/CompanyProfileReactJS/static/media/team-1.5a71ea053b28be13540f.jpg",
     "index.html": "/CompanyProfileReactJS/index.html",
-    "main.bee844c0.css.map": "/CompanyProfileReactJS/static/css/main.bee844c0.css.map",
-    "main.32045cce.js.map": "/CompanyProfileReactJS/static/js/main.32045cce.js.map"
+    "main.f9e89b96.css.map": "/CompanyProfileReactJS/static/css/main.f9e89b96.css.map",
+    "main.cad8850e.js.map": "/CompanyProfileReactJS/static/js/main.cad8850e.js.map"
   },
   "entrypoints": [
-    "static/css/main.bee844c0.css",
-    "static/js/main.32045cce.js"
+    "static/css/main.f9e89b96.css",
+    "static/js/main.cad8850e.js"
   ]
 }
