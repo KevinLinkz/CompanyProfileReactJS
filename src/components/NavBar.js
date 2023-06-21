@@ -85,39 +85,39 @@ const NavBar = () => {
                             </Nav >
                         </Container >
                     </Navbar.Collapse >
-                    <Modal
-                        show={showModal}
-                        onHide={handleModalClose}
-                        className="modal-navbar-dialog"
-                    >
-                        <Modal.Header closeButton >
-                            <Modal.Title><span className='first-span-modal'>Reve</span><span className='lastNameModal'>al</span></Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body >
-                            <Container id='modal-body-link' >
-                                <Link {...propLink} to='banner'>Home</Link>
-                                <Link {...propLink} to='profile' >About Us</Link>
-                                <Link {...propLink} to='services' >Services</Link>
-                                <Link {...propLink} to='portfolio' >Portfolio</Link>
-                                <Link {...propLink} to='our-teams' >Team</Link>
-                                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                                    <NavDropdown.Item href="#action/3.1">Drop Down 1</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Drop Down 2</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Drop Down 3</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.4">Drop Down 4</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.5">Drop Down 5</NavDropdown.Item>
-                                </NavDropdown>
-                                <Link {...propLink} to='contact-us' >Contact</Link>
 
-                            </Container>
-                        </Modal.Body >
-                        <Modal.Footer>
-
-                        </Modal.Footer>
-                    </Modal >
                 </Container >
             </Navbar >
+            <Modal
+                show={showModal}
+                onHide={handleModalClose}
+                className="modal-navbar-dialog"
+            >
+                <Modal.Header closeButton >
+                    <Modal.Title><span className='first-span-modal'>Reve</span><span className='lastNameModal'>al</span></Modal.Title>
+                </Modal.Header>
+                <Modal.Body >
+                    <Container id='modal-body-link' >
+                        <Link {...propLink} to='banner'>Home</Link>
+                        <Link {...propLink} to='profile' >About Us</Link>
+                        <Link {...propLink} to='services' >Services</Link>
+                        <Link {...propLink} to='portfolio' >Portfolio</Link>
+                        <Link {...propLink} to='our-teams' >Team</Link>
+                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Drop Down 1</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Drop Down 2</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Drop Down 3</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">Drop Down 4</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.5">Drop Down 5</NavDropdown.Item>
+                        </NavDropdown>
+                        <Link {...propLink} to='contact-us' >Contact</Link>
 
+                    </Container>
+                </Modal.Body >
+                <Modal.Footer>
+
+                </Modal.Footer>
+            </Modal >
         </section >
 
 

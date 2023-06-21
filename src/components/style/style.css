@@ -125,8 +125,10 @@ section {
 }
 
 .navbar-contents {
+    position: relative;
     display: flex;
-    height: 5.5em;
+    /* height: 5.5em; */
+    height: 100%;
 }
 
 .fixed-navbar {
@@ -420,7 +422,9 @@ section {
     width: 100%;
 }
 
-
+.logo-clients .slick-slider .slick-initialized {
+    height: 100vh;
+}
 
 .logo-clients img {
     opacity: 0.4;
@@ -432,26 +436,30 @@ section {
     opacity: 1;
 }
 
+
 .custom-dots-logo {
+    display: inline-flex !important;
+    width: 90%;
+    height: 2em;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
     text-align: center;
-
 }
 
 .custom-dots-logo li {
-    display: inline-block;
     width: 20px;
     height: 20px;
-    margin: 10px 5px 0;
     cursor: pointer;
+    margin: 0 0 0 5px;
 
 }
 
 .custom-dots-logo li button {
     font-size: 12px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
     background-color: #ccc;
     border: none;
     cursor: pointer;
@@ -470,7 +478,7 @@ section {
 /* =============================================Portfolio=================================================== */
 #portfolio {
     position: relative;
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -844,6 +852,10 @@ section {
     #banner-call .description h1,
     #banner-call .description p {
         text-align: center;
+    }
+
+    .modal-image-portfolio .modal-image-portfolio-dialog .modal-content {
+        width: 85%;
     }
 
 }

@@ -34,11 +34,11 @@ const Portfolio = () => {
         setShowModal(false)
     }
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
     };
     return (
         <section id="portfolio" className="wow fadeInUpBig">
