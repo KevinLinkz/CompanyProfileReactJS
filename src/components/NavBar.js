@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Container, Nav, NavDropdown, Navbar, Modal } from 'react-bootstrap'
 import { Link } from 'react-scroll';
 
 const NavBar = () => {
     const [showModal, setShowModal] = useState(false);
+    const navBar = useRef(null)
 
     const handleModalOpen = () => {
         window.addEventListener('scroll', handleScrollFixNavBar)
@@ -16,20 +17,19 @@ const NavBar = () => {
     }
 
     const handleScrollFixNavBar = () => {
-        var navBar = document.getElementById("navbar");
-        var banner = document.getElementById("banner");
-        var defaultActiveKey = document.querySelector(".defaultActiveKey")
-        var navBarHeight = navBar.offsetHeight;
-        var scrollPosition = window.scrollY;
+        const banner = document.getElementById("banner");
+        const defaultActiveKey = document.querySelector(".defaultActiveKey")
+        const navBarHeight = navBar.current.offsetHeight;
+        const scrollPosition = window.scrollY;
 
         if (scrollPosition > navBarHeight) {
-            navBar.classList.remove("wow", "fadeInLeft");
-            navBar.classList.add("fixed-navbar");
+            navBar.current.classList.remove("wow", "fadeInLeft");
+            navBar.current.classList.add("fixed-navbar");
             defaultActiveKey.classList.remove("nav-link", "activated")
             banner.style.marginTop = "5.5em";
         } else {
-            navBar.classList.add("wow", "fadeInLeft");
-            navBar.classList.remove("fixed-navbar")
+            navBar.current.classList.add("wow", "fadeInLeft");
+            navBar.current.classList.remove("fixed-navbar")
             defaultActiveKey.classList.add("nav-link", "active")
             banner.style.marginTop = "0";
         }
@@ -43,7 +43,7 @@ const NavBar = () => {
         }
     }, []);
 
-    var propLink = {
+    const propLink = {
         activeClass: "nav-link active",
         to: "portfolio",
         spy: true,
@@ -55,7 +55,7 @@ const NavBar = () => {
     }
 
     return (
-        <section id='navbar' className='wow fadeInLeft'>
+        <section ref={navBar} id='navbar' className='wow fadeInLeft'>
             {/* // <Navbar expand="lg" bg='light' id='NavBar'> */}
             <Navbar className='navbar-contents' expand="lg" expanded={false} >
                 <Container >

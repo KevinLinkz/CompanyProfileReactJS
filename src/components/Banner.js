@@ -10,7 +10,6 @@ const Banner = () => {
                 <Carousel className="carousel-banner" interval={4000} fade={true}>
                     {
                         dataImages.images.map((data) => {
-                            // const x = require(data.url)
                             return (
                                 <Carousel.Item key={data.id}>
                                     <img className="d-block w-100" src={require(`${data.url}`)} alt={data.alt} />

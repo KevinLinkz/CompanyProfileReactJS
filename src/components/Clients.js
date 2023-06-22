@@ -4,7 +4,7 @@ import dataClients from './data/dataImagesClients.json'
 
 
 const Clients = () => {
-    var settings = {
+    const settings = {
         dots: true,
         dotsClass: 'custom-dots-logo',
         infinite: true,

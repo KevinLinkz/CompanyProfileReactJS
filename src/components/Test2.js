@@ -24,6 +24,11 @@ export default function Test() {
         }
     }
 
+    const testtest = () => {
+        var x = 2
+        var y = 10
+    }
+
     useEffect(() => {
         handleScrollFixNavBar()
         window.addEventListener('scroll', handleScrollFixNavBar)

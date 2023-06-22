@@ -5,7 +5,7 @@ import dataTestimonials from './data/dataImagesTestimonials.json'
 
 
 const Testimonials = () => {
-    var settings = {
+    const settings = {
         dots: true,
         dotsClass: 'custom-dots-logo',
         infinite: true,
