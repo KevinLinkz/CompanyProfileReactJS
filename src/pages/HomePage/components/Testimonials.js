@@ -1,10 +1,9 @@
 import { Container } from "react-bootstrap"
 import Slider from "react-slick"
-import dataTestimonials from './data/dataImagesTestimonials.json'
 
 
 
-const Testimonials = () => {
+const Testimonials = (dataJson) => {
     const settings = {
         dots: true,
         dotsClass: 'custom-dots-logo',
@@ -44,7 +43,7 @@ const Testimonials = () => {
                 <Container id="testimonials-card">
                     <Slider {...settings}>
                         {
-                            dataTestimonials.testimonials.map((data) => {
+                            dataJson.data.testimonials.map((data) => {
                                 return (
 
                                     <div key={data.id}>

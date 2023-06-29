@@ -1,10 +1,9 @@
 import { faFacebook, faGooglePlus, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Col, Container, Row } from "react-bootstrap"
-import dataTeams from './data/dataImagesOurTeams.json'
 
 
-const OurTeams = () => {
+const OurTeams = (dataJson) => {
     return (
         <section id="our-teams" className="wow fadeInUpBig">
             <Container >
@@ -12,11 +11,11 @@ const OurTeams = () => {
                     <h1>OUR TEAMS</h1>
                     <Row>
                         {
-                            dataTeams.teams.map((data) => {
+                            dataJson.data.teams.map((data) => {
                                 return (
                                     <Col key={data.id} className="col-lg-3 col-md-6 col-12">
                                         <div className="item">
-                                            <img alt={dataTeams.alt} src={require(`${data.imageURL}`)}></img>
+                                            <img alt={data.alt} src={require(`${data.imageURL}`)}></img>
                                             <div className="item-details">
                                                 <h3>{data.name}</h3>
                                                 <h4>{data.position}</h4>

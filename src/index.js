@@ -1,46 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import NavBar from './components/NavBar';
-import TopBar from './components/TopBar';
-import Banner from './components/Banner';
-import Profile from './components/Profile';
-import Services from './components/Services';
-import Clients from './components/Clients';
-import Portfolio from './components/Portfolio';
-import Testimonials from './components/Testimonials';
-import CallBanner from './components/CallBanner';
-import OurTeams from './components/OurTeams';
-import ContactUs from './components/ContactUs';
-import Footer from './components/Footer';
-// import Test from './components/Test2'
-import { InitScripts } from './components/InitScripts';
 import './index.css'
-import './components/style/style.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'wow.js/css/libs/animate.css';
+
+import HomePage from './pages/HomePage/HomePage'
+import AdminPage from './pages/AdminPage/AdminPage'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import './style/style.css'
+import './style/mainStyle.scss'
+
+
 // carousel https://swiperjs.com
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-InitScripts();
 
 root.render(
 
   <React.StrictMode>
+    <Router>
+      <Routes>
+        <Route path="/CompanyProfileReactJS" element={<HomePage />} />
+        <Route path="/administrator" element={<AdminPage />} />
+        <Route path="*" element={<NotFound />} status={404} />
+      </Routes>
+    </Router>
 
-    {/* <Test /> */}
-    <TopBar />
-    <NavBar />
-    <Banner />
-    <Profile />
-    <Services />
-    <Clients />
-    <Portfolio />
-    <Testimonials />
-    <CallBanner />
-    <OurTeams />
-    <ContactUs />
-    <Footer />
-
-  </React.StrictMode>
+  </React.StrictMode >
 );
+
+function NotFound() {
+  return <h1>404 Not Found</h1>;
+} 

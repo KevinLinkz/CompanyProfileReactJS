@@ -2,27 +2,27 @@
     "images": [
         {
             "id": 1,
-            "url": "./img/intro-carousel/1.jpg",
+            "url": "./assets/img/intro-carousel/1.jpg",
             "alt": "First slide"
         },
         {
             "id": 2,
-            "url": "./img/intro-carousel/2.jpg",
+            "url": "./assets/img/intro-carousel/2.jpg",
             "alt": "Second slide"
         },
         {
             "id": 3,
-            "url": "./img/intro-carousel/3.jpg",
+            "url": "./assets/img/intro-carousel/3.jpg",
             "alt": "Third slide"
         },
         {
             "id": 4,
-            "url": "./img/intro-carousel/4.jpg",
+            "url": "./assets/img/intro-carousel/4.jpg",
             "alt": "Fourth slide"
         },
         {
             "id": 5,
-            "url": "./img/intro-carousel/5.jpg",
+            "url": "./assets/img/intro-carousel/5.jpg",
             "alt": "Fifth slide"
         }
     ]

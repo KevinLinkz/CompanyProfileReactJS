@@ -21,8 +21,8 @@ const ContactUs = () => {
                                 <p>A108 Adam Street, NY 535022, USA</p>
                             </div>
                         </Col>
-                        <Col className="col-lg-4 col-md-4 middle col-12">
-                            <div className="item" >
+                        <Col className="col-lg-4 col-md-4 col-12">
+                            <div className="item">
                                 <BsTelephone size={sizeIcon} />
                                 <h3>PHONE NUMBER</h3>
                                 <a href="/" ><p>+1 5589 55488 55</p></a>

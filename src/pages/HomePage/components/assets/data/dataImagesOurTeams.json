@@ -2,7 +2,7 @@
     "teams": [
         {
             "id": 1,
-            "imageURL": "./img/team-1.jpg",
+            "imageURL": "./assets/img/team-1.jpg",
             "alt": "Team member 1",
             "name": "Walter White",
             "position": "Chief Executive Officer",
@@ -13,7 +13,7 @@
         },
         {
             "id": 2,
-            "imageURL": "./img/team-2.jpg",
+            "imageURL": "./assets/img/team-2.jpg",
             "alt": "Team member 2",
             "name": "Sarah Jhinson",
             "position": "Product Manager",
@@ -24,7 +24,7 @@
         },
         {
             "id": 3,
-            "imageURL": "./img/team-3.jpg",
+            "imageURL": "./assets/img/team-3.jpg",
             "alt": "Team member 3",
             "name": "William Anderson",
             "position": "CTO",
@@ -35,7 +35,7 @@
         },
         {
             "id": 4,
-            "imageURL": "./img/team-4.jpg",
+            "imageURL": "./assets/img/team-4.jpg",
             "alt": "Team member 4",
             "name": "Amanda Jepson",
             "position": "Accountant",

@@ -1,7 +1,7 @@
 import { Col, Container, ListGroup, ListGroupItem, Row } from "react-bootstrap"
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 
-const imgProfile = require('./img/about-img.jpg')
+const imgProfile = require('./assets/img/about-img.jpg')
 const Profile = () => {
     return (
         <section id="profile" className="wow fadeInUpBig" data-wow-duration="1s">

@@ -2,7 +2,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faAddressBook } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook, faGooglePlus, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import dataIcons from './data/dataIconTopBar.json'
 
 const iconMap = {
     faTwitter: faTwitter,
@@ -12,10 +11,9 @@ const iconMap = {
     faLinkedin: faLinkedin,
 };
 
-function TopBar() {
-
+const TopBar = (dataJson) => {
     return (
-        <section id='top-bar'>
+        <section id='top-bar' className='d-lg-flex d-md-none '>
             <Container fluid>
                 <Container fluid='lg'>
                     <Row >
@@ -25,7 +23,7 @@ function TopBar() {
                         </Col>
                         <Col className='social-media'>
                             {
-                                dataIcons.icons.map((data) => {
+                                dataJson.data.icons.map((data) => {
                                     return <a key={data.id} href={data.href} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={iconMap[data.name]} /></a>
                                 })
 
