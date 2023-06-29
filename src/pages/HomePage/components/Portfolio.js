@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react"
 import { Col, Container, Row, Modal } from "react-bootstrap"
 import Slider from "react-slick"
-import dataImages from './data/dataImagesPortfolio.json'
 
-const Portfolio = () => {
+const Portfolio = (dataJson) => {
     const [showModal, setShowModal] = useState(false);
     const [sliderIndex, setSliderIndex] = useState(0);
     const onceLoad = useRef(false)
@@ -48,12 +47,12 @@ const Portfolio = () => {
                     <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
                 </Container>
             </Container >
-            <Container fluid id="portfolio-images" className="wow fadeInUpBig">
-                <Row >
+            <Container fluid id="portfolio-images">
+                <Row className="">
                     {
-                        dataImages.images.map((data, index) => {
+                        dataJson.data.images.map((data, index) => {
                             return (
-                                <Col key={data.id} className="col-lg-3 col-md-4">
+                                <Col key={data.id} className="col-lg-3 col-md-4 wow fadeInUpBig" >
                                     <img className="w-100" src={require(`${data.url}`)} alt={data.alt} />
                                     <div className="cover-portfolio-images" onClick={() => handleModalOpen(index)} >
                                         <div className="caption-portfolio-images">
@@ -75,7 +74,7 @@ const Portfolio = () => {
                         <div >
                             <Slider initialSlide={sliderIndex} {...settings}>
                                 {
-                                    dataImages.images.map((data) => {
+                                    dataJson.data.images.map((data) => {
                                         return (
                                             <div key={data.id}>
                                                 <img className="w-100" src={require(`${data.url}`)} alt={data.alt} />

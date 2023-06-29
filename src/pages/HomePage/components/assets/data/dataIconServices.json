@@ -1,0 +1,40 @@
+{
+    "services": [
+        {
+            "id": 1,
+            "iconFamily": "ai",
+            "icon": "AiOutlineBarChart",
+            "title": "Lorem Ipsum",
+            "detail": "Ullamco enim sit est labore labore aliquip do esse sunt occaecat et dolor eiusmod.Esse nulla aliqua eu sit.Aliqua officia reprehenderit dolor minim commodo.",
+            "wowClass": "fadeInLeftBig",
+            "wowClassDuration": "1s"
+        },
+        {
+            "id": 2,
+            "iconFamily": "ai",
+            "icon": "AiOutlinePicture",
+            "title": "Dolor Sitema",
+            "detail": "Occaecat et ad ut dolore non.Labore consectetur nulla labore id esse deserunt sint deserunt duis duis consequat proident.",
+            "wowClass": "fadeInRightBig",
+            "wowClassDuration": "1s"
+        },
+        {
+            "id": 3,
+            "iconFamily": "ai",
+            "icon": "AiFillShopping",
+            "title": "Sed ut perspiciatis",
+            "detail": "Cupidatat deserunt voluptate amet excepteur laboris consequat laborum enim. Non minim eiusmod cillum reprehenderit sunt velit nulla et sit dolore ea labore amet.",
+            "wowClass": "fadeInLeftBig",
+            "wowClassDuration": "1.3s"
+        },
+        {
+            "id": 4,
+            "iconFamily": "fa",
+            "icon": "FaMap",
+            "title": "Magni Dolores",
+            "detail": "Duis culpa tempor et sint adipisicing occaecat irure duis. Voluptate proident aliquip fugiat ex enim esse labore consectetur nostrud eu amet.",
+            "wowClass": "fadeInRightBig",
+            "wowClassDuration": "1.3s"
+        }
+    ]
+}

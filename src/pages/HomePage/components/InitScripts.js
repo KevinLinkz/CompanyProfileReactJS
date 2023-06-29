@@ -9,5 +9,4 @@ export const InitScripts = () => {
         live: true
     });
     wow.init();
-
 }

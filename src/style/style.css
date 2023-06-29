@@ -28,7 +28,8 @@ code {
 .header-section h1 {
     color: var(--blue-color);
     font-weight: 700;
-    padding-bottom: 20px;
+    font-size: 32px;
+    padding-bottom: 16px;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -42,12 +43,16 @@ code {
 
 .header-section p {
     margin-bottom: 18px;
-    font-size: 20px;
-    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
 }
 
 section {
     position: relative;
+}
+
+.container {
+    /* max-width: 1140px !important; */
 }
 
 
@@ -306,6 +311,7 @@ section {
 /* ================================================================================================ */
 /* =============================================Profile=================================================== */
 
+
 #profile .custom-list-group {
     border: none;
 }
@@ -313,6 +319,7 @@ section {
 #profile .custom-list-group .list-group-item {
     border: none;
     padding-left: 0;
+    font-family: "Open Sans", sans-serif;
 }
 
 #profile img {
@@ -337,8 +344,10 @@ section {
     font-style: italic;
     color: #7e7e7e;
     margin-bottom: 18px;
-    font-size: 21px;
+    font-size: 18px;
+    font-weight: 300;
     font-family: "Montserrat", sans-serif;
+    line-height: 30px;
 }
 
 #profile-detail svg {
@@ -536,19 +545,6 @@ section {
     background-color: rgb(0, 0, 0, .8);
 }
 
-.modal-image-portfolio .modal-image-portfolio-dialog {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .modal-image-portfolio .modal-image-portfolio-dialog .modal-content {
     width: 50%;
     background-color: rgba(255, 255, 255, 0);
@@ -623,12 +619,12 @@ section {
 }
 
 #testimonials-card p::before {
-    content: url("../img/quote-sign-left.png");
+    content: url("../pages/HomePage/components/assets/img/quote-sign-left.png");
     margin-right: 20px;
 }
 
 #testimonials-card p::after {
-    content: url("../img/quote-sign-right.png");
+    content: url("../pages/HomePage/components/assets/img/quote-sign-right.png");
     margin-left: 20px;
 }
 

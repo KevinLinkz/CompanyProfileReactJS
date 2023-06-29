@@ -1,9 +1,8 @@
 import { Container } from "react-bootstrap"
 import Slider from "react-slick"
-import dataClients from './data/dataImagesClients.json'
 
 
-const Clients = () => {
+const Clients = (dataJson) => {
     const settings = {
         dots: true,
         dotsClass: 'custom-dots-logo',
@@ -16,12 +15,12 @@ const Clients = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
                     swipeToSlide: true,
                     infinite: true,
                     dots: true,
-                    initialSlide: 3
+                    initialSlide: 4
                 }
             },
             {
@@ -51,15 +50,15 @@ const Clients = () => {
     return (
         <section id="clients" className="wow fadeInUpBig">
 
-            <Container >
-                <Container className="header-section">
+            <Container>
+                <Container className="header-section" >
                     <h1>CLIENTS</h1>
                     <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
                 </Container>
                 <Container className="logo-clients">
                     <Slider {...settings}>
                         {
-                            dataClients.clients.map((data) => {
+                            dataJson.data.clients.map((data) => {
                                 return (
                                     <div key={data.id}>
                                         <img className="d-block w-100" src={require(`${data.imageURL}`)} alt={data.alt} />
