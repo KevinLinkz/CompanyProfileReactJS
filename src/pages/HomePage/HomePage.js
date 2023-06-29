@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'wow.js/css/libs/animate.css';
 import { InitScripts } from './components/InitScripts';
@@ -24,8 +24,6 @@ import dataTeams from './components/assets/data/dataImagesOurTeams.json'
 import dataTopBar from './components/assets/data/dataIconTopBar.json'
 import dataPortfolio from './components/assets/data/dataImagesPortfolio.json'
 import dataServices from './components/assets/data/dataIconServices.json'
-import Scrollbar from 'smooth-scrollbar'
-import WOW from "wow.js"
 
 const HomePage = () => {
     InitScripts();

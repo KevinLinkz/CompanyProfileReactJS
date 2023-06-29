@@ -1,7 +1,14 @@
 import { Carousel, Container, Button } from "react-bootstrap"
+import { Link } from "react-scroll"
 
 const Banner = (dataJson) => {
 
+    const propLink = {
+        spy: true,
+        smooth: 'easeInOutQuint',
+        offset: -100,
+        duration: 100,
+    }
     return (
         <section id='banner' className="">
             <Container fluid >
@@ -20,8 +27,8 @@ const Banner = (dataJson) => {
                     <Container className="intro-banner-content">
                         <h1>Making <span>your ideas</span></h1>
                         <h1>happen!</h1>
-                        <Button>Get Started</Button>
-                        <Button>Our Projects</Button>
+                        <Link {...propLink} to="profile"><Button>Get Started</Button></Link>
+                        <Link {...propLink} to="portfolio"><Button>Our Projects</Button></Link>
                     </Container>
                 </Container>
 

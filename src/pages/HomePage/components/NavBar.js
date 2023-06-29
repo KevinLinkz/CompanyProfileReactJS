@@ -44,9 +44,8 @@ const NavBar = () => {
         activeClass: "nav-link active",
         spy: true,
         smooth: 'easeInOutQuint',
-        offset: -90,
+        offset: -100,
         duration: 100,
-
     }
 
     return (
@@ -100,14 +99,14 @@ const NavBar = () => {
                         <Link {...propLink} to='portfolio' onClick={handleModalClose}>Portfolio</Link>
                         <Link {...propLink} to='our-teams' onClick={handleModalClose} >Team</Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item ><Link {...propLink} to='action/3.1'>Drop Down 1</Link></NavDropdown.Item>
-                            <NavDropdown.Item ><Link {...propLink} to='action/3.1'>Drop Down 2</Link></NavDropdown.Item>
-                            <NavDropdown.Item ><Link {...propLink} to='action/3.1'>Drop Down 3</Link></NavDropdown.Item>
-                            <NavDropdown.Item ><Link {...propLink} to='action/3.1'>Drop Down 4</Link></NavDropdown.Item>
-                            <NavDropdown.Item ><Link {...propLink} to='action/3.1'>Drop Down 5</Link></NavDropdown.Item>
-                            <NavDropdown.Item ><Link {...propLink} to='action/3.1'>Drop Down 6</Link></NavDropdown.Item>
+                            <NavDropdown.Item ><Link {...propLink} to='action/3.1' onClick={handleModalClose}>Drop Down 1</Link></NavDropdown.Item>
+                            <NavDropdown.Item ><Link {...propLink} to='action/3.1' onClick={handleModalClose}>Drop Down 2</Link></NavDropdown.Item>
+                            <NavDropdown.Item ><Link {...propLink} to='action/3.1' onClick={handleModalClose}>Drop Down 3</Link></NavDropdown.Item>
+                            <NavDropdown.Item ><Link {...propLink} to='action/3.1' onClick={handleModalClose}>Drop Down 4</Link></NavDropdown.Item>
+                            <NavDropdown.Item ><Link {...propLink} to='action/3.1' onClick={handleModalClose}>Drop Down 5</Link></NavDropdown.Item>
+                            <NavDropdown.Item ><Link {...propLink} to='action/3.1' onClick={handleModalClose}>Drop Down 6</Link></NavDropdown.Item>
                         </NavDropdown>
-                        <Link {...propLink} to='contact-us' >Contact</Link>
+                        <Link {...propLink} to='contact-us' onClick={handleModalClose}>Contact</Link>
 
                     </Modal.Body >
                     <Modal.Footer>
