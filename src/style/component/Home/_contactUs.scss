@@ -1,5 +1,5 @@
-@use './variables';
-@use './mixin';
+@use '../variables';
+@use '../mixin';
 
 #contact-us {
 
@@ -55,8 +55,7 @@
     }
 
     iframe {
-        width: 100%;
-        height: 450px;
+        @include mixin.defaultWidthHeight(100%, 450px);
         border: 0;
     }
 
@@ -71,10 +70,9 @@
         }
 
         button {
+            @include mixin.defaultWidthHeight(10em, 3em);
             background-color: variables.$greenColor;
             border: 0;
-            width: 10em;
-            height: 3em;
             font-size: 20px;
         }
     }

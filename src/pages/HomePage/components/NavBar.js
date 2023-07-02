@@ -5,6 +5,8 @@ import { PiCaretUpBold } from 'react-icons/pi'
 
 const NavBar = () => {
     const [showModal, setShowModal] = useState(false);
+    const navbarRef = useRef(null)
+    const floatingIconRef = useRef(null)
 
     const handleModalOpen = () => {
         setShowModal(true);
@@ -16,17 +18,14 @@ const NavBar = () => {
 
     const handleOnScrollTop = () => {
         const defaultActiveKey = document.querySelector(".defaultActiveKey")
-        const floatingIconHome = document.querySelector(".floating-icon-home")
-        const navBar = document.getElementById("navbar")
-
         const scrollPosition = window.scrollY;
 
-        if (scrollPosition > navBar.offsetHeight) {
-            floatingIconHome.classList.add("floating-icon-home-visible")
+        if (scrollPosition > navbarRef.current.offsetHeight) {
+            floatingIconRef.current.classList.add("floating-icon-home-visible")
             defaultActiveKey.classList.remove("nav-link", "activated")
         } else {
             defaultActiveKey.classList.add("nav-link", "active")
-            floatingIconHome.classList.remove("floating-icon-home-visible")
+            floatingIconRef.current.classList.remove("floating-icon-home-visible")
         }
 
 
@@ -51,7 +50,7 @@ const NavBar = () => {
     return (
         <>
 
-            <section id='navbar' className='wow fadeInLeft'>
+            <section ref={navbarRef} id='navbar' className='wow fadeInLeft'>
                 {/* // <Navbar expand="lg" bg='light' id='NavBar'> */}
                 <Navbar className='navbar-contents' expand="lg" expanded={false} >
                     <Container>
@@ -60,9 +59,9 @@ const NavBar = () => {
                         <Navbar.Collapse id='basic-navbar-nav'>
                             <Container className="navbar-detail">
                                 {/*
-                            me-auto for position content on the left 
-                            mr-auto for position content on the right 
-                        */}
+                                    me-auto for position content on the left 
+                                    mr-auto for position content on the right 
+                                 */}
                                 <Nav defaultActiveKey="top-bar">
                                     <Link {...propLink} to='top-bar' className='defaultActiveKey nav-link active'>Home</Link>
                                     <Link {...propLink} to='profile' >About Us</Link>
@@ -116,7 +115,7 @@ const NavBar = () => {
 
             </section >
 
-            <div className='floating-icon-home'>
+            <div ref={floatingIconRef} className='floating-icon-home'>
                 <Link to="#" onClick={() => animateScroll.scrollToTop({ duration: 100 })}><PiCaretUpBold ></PiCaretUpBold></Link>
             </div>
         </>

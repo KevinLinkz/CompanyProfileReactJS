@@ -1,8 +1,10 @@
 {
     "livePreview.defaultPreviewPath": "/public/index.html",
     "cSpell.words": [
+        "DASHMIN",
         "fontawesome",
         "fortawesome",
+        "gsap",
         "noopener",
         "noreferrer",
         "predeploy",

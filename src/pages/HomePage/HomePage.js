@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'wow.js/css/libs/animate.css';
 import { InitScripts } from './components/InitScripts';
 import 'animate.css';
+import '../../style/mainStyle.scss'
 
 import NavBar from './components/NavBar'
 import TopBar from './components/TopBar';
@@ -26,7 +27,9 @@ import dataPortfolio from './components/assets/data/dataImagesPortfolio.json'
 import dataServices from './components/assets/data/dataIconServices.json'
 
 const HomePage = () => {
+
     InitScripts();
+
     return (
         <>
             {/* <Test2 data={dataTopBar} /> */}
@@ -42,7 +45,6 @@ const HomePage = () => {
             <OurTeams data={dataTeams} />
             <ContactUs />
             <Footer />
-
         </>
 
 

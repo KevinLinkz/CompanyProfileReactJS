@@ -4,7 +4,7 @@
     justify-content: $justifyContent;
 }
 
-@mixin defaultWidthHeight() {
-    width: 100%;
-    height: 100%;
+@mixin defaultWidthHeight($width: 100%, $height: 100%) {
+    width: $width;
+    height: $height;
 }

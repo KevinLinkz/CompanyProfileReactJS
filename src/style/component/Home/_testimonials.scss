@@ -1,6 +1,5 @@
-@use './variables';
-@use './mixin';
-
+@use '../variables';
+@use '../mixin';
 
 #testimonials-card {
     font-family: variables.$secondaryFontFamily;
@@ -26,12 +25,12 @@
         font-weight: 100;
 
         &::before {
-            content: url("../../pages/HomePage/components/assets/img/quote-sign-left.png");
+            content: url("../../../pages/HomePage/components/assets/img/quote-sign-left.png");
             margin-right: 20px;
         }
 
         &::after {
-            content: url("../../pages/HomePage/components/assets/img/quote-sign-right.png");
+            content: url("../../../pages/HomePage/components/assets/img/quote-sign-right.png");
             margin-right: 20px;
         }
 
@@ -40,8 +39,7 @@
 
     .circle-image {
         position: relative;
-        width: 100px;
-        height: 100px;
+        @include mixin.defaultWidthHeight(100px, 100px);
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 10px;

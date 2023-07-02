@@ -10,7 +10,7 @@ const Banner = (dataJson) => {
         duration: 100,
     }
     return (
-        <section id='banner' className="">
+        <section id='banner'>
             <Container fluid >
                 <Carousel className="carousel-banner" interval={4000} fade={true}>
                     {

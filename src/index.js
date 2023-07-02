@@ -1,14 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'
-
 import HomePage from './pages/HomePage/HomePage'
+import LoginPage from './pages/AdminPage/LoginPage';
 import AdminPage from './pages/AdminPage/AdminPage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import './style/style.css'
-import './style/mainStyle.scss'
-
-
 // carousel https://swiperjs.com
 
 
@@ -21,7 +17,8 @@ root.render(
     <Router>
       <Routes>
         <Route path="/CompanyProfileReactJS" element={<HomePage />} />
-        <Route path="/administrator" element={<AdminPage />} />
+        <Route path="/administrator/dashboard" element={<AdminPage />} />
+        <Route path="/administrator/login" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} status={404} />
       </Routes>
     </Router>

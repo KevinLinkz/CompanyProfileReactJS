@@ -1,5 +1,5 @@
-@use './variables';
-@use './mixin';
+@use '../variables';
+@use '../mixin';
 
 #navbar {
     position: sticky;
@@ -27,6 +27,7 @@
         @include mixin.positionDisplay(flex, center, right);
         @include mixin.defaultWidthHeight();
 
+        font-family: variables.$thirdFontFamily;
 
         .nav-link.active {
             color: variables.$greenColor;
@@ -36,7 +37,7 @@
             color: variables.$grayTextColor;
             font-weight: 700;
             font-size: 15px;
-            padding: 0 2em 0 0;
+            padding: 0 0 0 1.5em;
             cursor: pointer;
             text-decoration: none;
             transition: color .3s ease;
@@ -54,10 +55,8 @@
 }
 
 .floating-icon-home {
-    @include mixin.defaultWidthHeight();
+    @include mixin.defaultWidthHeight(40px, 40px);
     @include mixin.positionDisplay(flex, center, center);
-    width: 40px;
-    height: 40px;
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -75,8 +74,7 @@
     }
 
     a svg {
-        width: 30px;
-        height: 30px;
+        @include mixin.defaultWidthHeight(30px, 30px);
         color: white;
 
     }
@@ -95,8 +93,7 @@
     }
 
     .modal-content {
-        width: 15em;
-        height: 100vh;
+        @include mixin.defaultWidthHeight(15em, 100vh);
         overflow: hidden;
 
         .modal-header {

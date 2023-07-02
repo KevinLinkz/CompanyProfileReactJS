@@ -1,5 +1,5 @@
-@use './variables';
-@use './mixin';
+@use '../variables';
+@use '../mixin';
 
 #our-teams {
     font-family: variables.$secondaryFontFamily;

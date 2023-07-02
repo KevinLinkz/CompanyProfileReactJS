@@ -1,0 +1,96 @@
+@use '../variables';
+@use '../mixin';
+
+#navbar-admin {
+    width: 100%;
+    font-family: variables.$primaryFontFamilyAdmin;
+
+    .navbar-contents {
+        @include mixin.positionDisplay(flex, center, center);
+        height: 4.5em;
+        background-color: variables.$grayBackgroundAdmin;
+
+        .navbar-brand {
+            @include mixin.positionDisplay(flex, center, center);
+            margin-left: 10px;
+
+            svg {
+                color: variables.$blueColorAdmin;
+            }
+        }
+
+        #searchInput {
+            margin-left: 10px;
+            border: none
+        }
+
+        svg {
+            @include mixin.defaultWidthHeight(20px, 20px);
+        }
+
+        .icon-background {
+            @include mixin.positionDisplay(flex, center, center);
+            @include mixin.defaultWidthHeight(40px, 40px);
+            background-color: white;
+            border-radius: 100%;
+            margin-right: 10px;
+            cursor: pointer;
+
+        }
+
+
+
+        .item {
+            display: flex;
+            justify-content: flex-end;
+            width: 500px;
+
+
+            div {
+                margin-right: 10px;
+            }
+
+
+            .dropdown-toggle {
+                &.show {
+                    .nav-custom-arrow {
+                        transform: rotate(-180deg) translate(-5px, 2px);
+                    }
+                }
+
+                &:hover {
+                    color: variables.$blueColorAdmin;
+                }
+
+                &::after {
+                    display: none !important;
+                }
+
+                .nav-custom-arrow {
+                    padding-left: 5px;
+                    width: 25px;
+                    height: 25px;
+                    stroke-width: 1;
+                    transition: transform .3s ease;
+
+                }
+
+            }
+
+            span {
+                @include mixin.positionDisplay(flex, center, center);
+                flex-wrap: nowrap;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+        img {
+            @include mixin.defaultWidthHeight();
+            object-fit: cover;
+            border-radius: 100%;
+
+        }
+    }
+
+}

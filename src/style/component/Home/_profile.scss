@@ -1,5 +1,5 @@
-@use './mixin';
-@use './variables';
+@use '../variables';
+@use '../mixin';
 
 #profile {
     margin-top: 3em;
@@ -40,6 +40,7 @@
             font-size: 16px;
             font-family: variables.$secondaryFontFamily;
             line-height: 30px;
+            font-weight: 500;
         }
 
         svg {

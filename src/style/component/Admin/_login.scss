@@ -1,0 +1,91 @@
+@use '../variables';
+@use '../mixin';
+
+#login {
+    font-family: variables.$primaryFontFamilyAdmin;
+    background-color: variables.$grayBackgroundAdmin;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+
+    .layout {
+        display: flex;
+        height: 100vh;
+        background-color: white;
+        padding: 0;
+
+        .form {
+            @include mixin.defaultWidthHeight(380px, 450px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f3f6f9;
+            padding: 40px;
+            border-radius: 10px;
+
+            .form-login {
+                width: 100%;
+
+                input {
+                    margin-bottom: 15px;
+                    height: 60px;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                button {
+                    @include mixin.defaultWidthHeight(100%, 60px);
+                    margin-bottom: 20px;
+                    background-color: variables.$blueColorAdmin;
+                    border-color: variables.$blueColorAdmin;
+                }
+
+                .row:nth-child(1) {
+                    padding-bottom: 20px;
+
+                    div:nth-child(1) {
+                        h3 {
+                            color: variables.$blueColorAdmin;
+                            font-weight: 700;
+                        }
+                    }
+
+                    div:nth-child(2) {
+                        display: flex;
+                        justify-content: end;
+
+                        h3 {
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .row:nth-child(4) {
+                    input {
+                        @include mixin.defaultWidthHeight(20px, 20px);
+                    }
+
+                    div:nth-child(2) {
+                        display: flex;
+                        justify-content: end;
+
+                    }
+                }
+
+                .row:nth-child(6) {
+                    div {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+
+            }
+
+        }
+    }
+
+}

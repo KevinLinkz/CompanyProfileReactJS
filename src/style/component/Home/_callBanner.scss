@@ -1,5 +1,5 @@
-@use './variables';
-@use './mixin';
+@use '../variables';
+@use '../mixin';
 
 #banner-call {
     background-color: variables.$blueColor;
