@@ -38,59 +38,95 @@
 
         }
 
-
-
         .item {
             display: flex;
-            justify-content: flex-end;
-            width: 500px;
+            justify-content: center;
+            width: 600px;
 
 
             div {
                 margin-right: 10px;
             }
 
+            .dropdown-menu {
+                background-color: variables.$grayBackgroundAdmin;
+                border: none;
+                padding-bottom: 0px;
+            }
 
-            .dropdown-toggle {
-                &.show {
-                    .nav-custom-arrow {
-                        transform: rotate(-180deg) translate(-5px, 2px);
+            .dropdown-item:hover {
+                background-color: variables.$grayDarkerBackgroundAdmin;
+            }
+
+            .dropdown-messages {
+
+                .dropdown-item {
+                    display: flex;
+                    border-bottom: 1px solid variables.$grayDarkerBorder;
+                    padding: 10px 20px;
+
+                    img {
+                        @include mixin.defaultWidthHeight(45px, 45px);
+                    }
+
+                    div {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        line-height: 10px;
+                        margin-left: 10px;
+                    }
+
+                    h6 {
+                        font-weight: 400;
+                    }
+
+                    &:last-child {
+                        justify-content: center;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        border: none;
+                    }
+
+                }
+
+
+            }
+
+            .dropdown-notifications {
+                .dropdown-item {
+                    text-align: left;
+                    line-height: 10px;
+                    padding: 10px 20px;
+                    border-bottom: 1px solid variables.$grayDarkerBorder;
+
+                    &:last-child {
+                        justify-content: center;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        border: none;
+                    }
+
+                    h6 {
+                        font-weight: 400;
                     }
                 }
-
-                &:hover {
-                    color: variables.$blueColorAdmin;
-                }
-
-                &::after {
-                    display: none !important;
-                }
-
-                .nav-custom-arrow {
-                    padding-left: 5px;
-                    width: 25px;
-                    height: 25px;
-                    stroke-width: 1;
-                    transition: transform .3s ease;
-
-                }
-
-            }
-
-            span {
-                @include mixin.positionDisplay(flex, center, center);
-                flex-wrap: nowrap;
-                font-size: 16px;
-                font-weight: 500;
             }
         }
 
-        img {
-            @include mixin.defaultWidthHeight();
-            object-fit: cover;
-            border-radius: 100%;
+        span {
+            @include mixin.positionDisplay(flex, center, center);
+            flex-wrap: nowrap;
+            font-size: 16px;
+            font-weight: 500;
 
+            .nav-custom-arrow {
+                @include mixin.defaultWidthHeight(25px, 25px);
+
+            }
         }
     }
+
+
 
 }

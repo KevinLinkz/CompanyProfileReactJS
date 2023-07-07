@@ -1,0 +1,171 @@
+@use '../variables';
+@use '../mixin';
+
+#sidebar {
+    @include mixin.defaultWidthHeight(16em, 100vh);
+    border: 1px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .container {
+        @include mixin.defaultWidthHeight();
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+
+        a {
+            text-decoration: none;
+
+            h2 {
+                color: variables.$blueColorAdmin;
+            }
+        }
+
+        .profile-item {
+            @include mixin.defaultWidthHeight(100%, 4em);
+            display: flex;
+            position: relative;
+            margin-top: 10px;
+
+
+            .img-online-icon {
+                @include mixin.defaultWidthHeight(10px, 10px);
+                position: absolute;
+                padding: 0;
+                top: 38px;
+                left: 35px;
+                background-color: #1f8657;
+                border-radius: 50%;
+                border: 1.5px solid white;
+            }
+
+            div {
+                @include mixin.defaultWidthHeight();
+                padding-top: 2px;
+                padding-left: 15px;
+                flex-direction: column;
+                line-height: 5px
+            }
+
+            img {
+                @include mixin.defaultWidthHeight(50px, 50px);
+                align-items: flex-start;
+            }
+
+            span {
+                font-weight: 300;
+                font-size: 16px;
+            }
+
+            h3 {
+                padding-top: 2px;
+                font-weight: 700;
+                font-size: 16px;
+            }
+        }
+
+        .navbar-nav {
+            @include mixin.defaultWidthHeight(16em, 100%);
+            display: block !important;
+
+            .nav-link {
+                margin: 0;
+                padding: 0;
+            }
+
+            .active {
+                .menu-item {
+                    color: variables.$blueColorAdmin;
+                    background-color: white;
+                    padding-left: 16px;
+                    border-left: 4px solid variables.$blueColorAdmin;
+
+                    .background-icon-item {
+                        background-color: variables.$grayBackgroundAdmin;
+                    }
+                }
+            }
+
+            .dropdown-menu {
+                width: 14em;
+                position: relative;
+                border: none;
+                margin-left: -20px;
+                padding: 0;
+                background-color: variables.$grayBackgroundAdmin;
+
+                .dropdown-item {
+                    padding: 0;
+                    padding-top: 5px;
+                    background-color: rgb(255, 0, 0, 0);
+
+                    .background-item {
+                        width: 100%;
+                        padding-left: 30px;
+                        color: black;
+
+                        &:hover {
+                            background-color: variables.$grayDarkerBackgroundAdmin;
+                        }
+                    }
+
+                    div {
+                        @include mixin.defaultWidthHeight(100%, 2em);
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        font-weight: 400;
+                        border-radius: 0 30px 30px 0;
+                        background-color: variables.$grayBackgroundAdmin;
+                    }
+                }
+            }
+
+            .menu-item {
+                @include mixin.defaultWidthHeight(14em, 3.2em);
+                display: flex;
+                align-items: center;
+                border-radius: 0 30px 30px 0;
+                margin-left: -20px;
+                padding-left: 20px;
+                color: black;
+                cursor: pointer;
+                transition: color .3s ease, background-color .3s ease, ;
+
+                .background-icon-item {
+                    @include mixin.defaultWidthHeight(40px, 40px);
+                    @include mixin.positionDisplay(flex, center, center);
+                    background-color: white;
+                    border-radius: 100%;
+                    margin-right: 10px;
+
+                    svg {
+                        @include mixin.defaultWidthHeight(20px, 20px);
+                    }
+                }
+
+                h6 {
+                    margin: 0;
+                }
+
+                &:hover {
+                    color: variables.$blueColorAdmin;
+                    background-color: white;
+                    padding-left: 16px;
+                    border-left: 4px solid variables.$blueColorAdmin;
+
+                    .background-icon-item {
+                        background-color: variables.$grayBackgroundAdmin;
+                    }
+                }
+
+                .nav-custom-arrow {
+                    margin-left: auto;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

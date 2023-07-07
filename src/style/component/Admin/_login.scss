@@ -9,10 +9,10 @@
     box-sizing: border-box;
 
     .layout {
-        display: flex;
         height: 100vh;
         background-color: white;
         padding: 0;
+        overflow: hidden;
 
         .form {
             @include mixin.defaultWidthHeight(380px, 450px);
@@ -55,7 +55,7 @@
 
                     div:nth-child(2) {
                         display: flex;
-                        justify-content: end;
+                        justify-content: flex-end;
 
                         h3 {
                             font-weight: 700;
@@ -70,7 +70,7 @@
 
                     div:nth-child(2) {
                         display: flex;
-                        justify-content: end;
+                        justify-content: flex-end;
 
                     }
                 }

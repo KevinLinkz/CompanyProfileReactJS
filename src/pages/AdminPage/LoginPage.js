@@ -14,7 +14,7 @@ const LoginPage = () => {
                             <Form.Group controlId="formBasicEmails">
                                 <Row>
                                     <Col className='col-7'>
-                                        <a href="#">
+                                        <a href="dashboard">
                                             <h3># DASHMIN</h3>
                                         </a>
                                     </Col>

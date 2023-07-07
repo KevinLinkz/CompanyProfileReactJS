@@ -2,3 +2,36 @@
 @use './component/variables';
 @use './component/Admin/login';
 @use './component/Admin/navbar';
+@use './component/Admin/sidebar';
+
+.img-profile {
+    @include mixin.defaultWidthHeight();
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.dropdown-toggle {
+    &.show {
+        .nav-custom-arrow {
+            transform: rotate(-180deg) translate(-5px, 2px);
+        }
+    }
+
+    &:hover {
+        color: variables.$blueColorAdmin;
+    }
+
+    &::after {
+        display: none !important;
+    }
+
+    .nav-custom-arrow {
+        @include mixin.defaultWidthHeight(25px, 25px);
+        padding-left: 5px;
+        stroke-width: 1;
+        transition: transform .3s ease;
+
+    }
+
+
+}
