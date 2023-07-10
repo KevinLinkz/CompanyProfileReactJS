@@ -26,6 +26,13 @@ const NavBar = () => {
             sectionSideBar.style.transform = 'translateX(-100%)';
         }
     }
+    // window.addEventListener('resize', function() {
+    //     // Check for changes in zoom level
+    //     if (window.innerWidth !== window.outerWidth) {
+    //       // Zoom level has changed
+    //       // Your code here...
+    //     }
+    //   });
     return (
         <section id='navbar-admin'>
             <Navbar expanded={true} className='navbar-contents'>

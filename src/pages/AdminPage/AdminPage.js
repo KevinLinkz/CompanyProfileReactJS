@@ -18,6 +18,21 @@ const AdminPage = () => {
             </Container>
         </section>
     )
+
+    //For render the menu
+    // import React from 'react';
+    // const Content = ({ selectedMenu }) => {
+    //     return (
+    //         <div className="content">
+    //             {selectedMenu === 'dashboard' && <DashboardPage />}
+    //             {selectedMenu === 'profile' && <ProfilePage />}
+    //             {selectedMenu === 'settings' && <SettingsPage />}
+    //         </div>
+    //     );
+    // };
+
+    // export default Content;
+
 }
 
 export default AdminPage
