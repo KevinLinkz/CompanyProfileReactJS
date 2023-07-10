@@ -6,6 +6,10 @@ Project Description
 
 ### Todo
 
+- [ ] Make main layour for admin, background and layout will in one class, and another class will render by menu.  
+- [ ] #DASHMIN will change # if smaller media  
+- [ ] disappear navbar item span when smaller media  
+- [ ] change every media in admin side  
 - [ ] Make page not found  
 
 ### In Progress

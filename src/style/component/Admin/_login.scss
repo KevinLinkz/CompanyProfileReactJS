@@ -7,15 +7,25 @@
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
+    overflow: hidden;
+
+    .layout.layout-transform {}
 
     .layout {
-        height: 100vh;
+        @include mixin.defaultWidthHeight(100%, 100vh);
+        display: flex;
+        flex-direction: column;
         background-color: white;
         padding: 0;
         overflow: hidden;
+        transition: padding-left 1s ease;
+
 
         .form {
-            @include mixin.defaultWidthHeight(380px, 450px);
+            // @include mixin.defaultWidthHeight(380px, 450px);
+            min-width: 320px;
+            max-width: 380px;
+            height: 450px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -66,6 +76,7 @@
                 .row:nth-child(4) {
                     input {
                         @include mixin.defaultWidthHeight(20px, 20px);
+                        margin-top: 2px;
                     }
 
                     div:nth-child(2) {

@@ -1,19 +1,24 @@
 @use '../variables';
 @use '../mixin';
 
+
 #sidebar {
-    @include mixin.defaultWidthHeight(16em, 100vh);
-    border: 1px solid red;
+    @include mixin.defaultWidthHeight(15.6em, 100vh);
     position: absolute;
     top: 0;
     left: 0;
+    transform: translateX(-100%);
+    // left: -(variables.$widthSidebar);
+    transition: transform 1s ease;
+    background-color: variables.$grayBackgroundAdmin;
+    border: 1px solid red;
+
 
     .container {
         @include mixin.defaultWidthHeight();
         display: flex;
         flex-direction: column;
         padding: 20px;
-        width: 100%;
 
         a {
             text-decoration: none;
@@ -75,7 +80,7 @@
                 padding: 0;
             }
 
-            .active {
+            .custom-main-active {
                 .menu-item {
                     color: variables.$blueColorAdmin;
                     background-color: white;
@@ -106,6 +111,11 @@
                         padding-left: 30px;
                         color: black;
 
+                        &.nav-custom-dropdown,
+                        &.nav-custom-dropdown:hover {
+                            background-color: variables.$blueColorAdmin;
+                        }
+
                         &:hover {
                             background-color: variables.$grayDarkerBackgroundAdmin;
                         }
@@ -115,11 +125,13 @@
                         @include mixin.defaultWidthHeight(100%, 2em);
                         display: flex;
                         align-items: center;
-                        justify-content: start;
+                        justify-content: flex-start;
                         font-weight: 400;
                         border-radius: 0 30px 30px 0;
                         background-color: variables.$grayBackgroundAdmin;
                     }
+
+
                 }
             }
 
@@ -165,6 +177,8 @@
                     margin-left: auto;
                     margin-right: 10px;
                 }
+
+
             }
         }
     }

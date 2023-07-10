@@ -12,9 +12,6 @@ const iconMaps = {
 
 
 const Services = (dataJson) => {
-
-
-
     return (
         <section id="services">
             <Container>

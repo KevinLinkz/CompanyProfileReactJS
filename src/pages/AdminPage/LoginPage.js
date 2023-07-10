@@ -8,8 +8,6 @@ const LoginPage = () => {
             <Container fluid className='background'>
                 <Container className='layout'>
                     <Container className='form'>
-
-
                         <Form className="form-login">
                             <Form.Group controlId="formBasicEmails">
                                 <Row>
@@ -27,8 +25,10 @@ const LoginPage = () => {
                                     <Col><Form.Control type="password" placeholder="Password" /></Col>
                                 </Row>
                                 <Row>
-                                    <Col><Form.Check type="checkbox" label="Check me out" /></Col>
-                                    <Col><a href='#'>Forgot Password</a></Col>
+                                    <Col>
+                                        <Form.Check type="checkbox" label="Check me out" />
+                                    </Col>
+                                    <Col><a href='/'>Forgot Password</a></Col>
                                 </Row>
                                 <Row>
                                     <Col><Button variant="primary" type="submit">
@@ -37,7 +37,7 @@ const LoginPage = () => {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col><span> Don't have an Account? <a href='#'>Sign Up</a></span></Col>
+                                    <Col><span> Don't have an Account? <a href='/'>Sign Up</a></span></Col>
                                 </Row>
 
                             </Form.Group>

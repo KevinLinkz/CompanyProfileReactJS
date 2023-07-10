@@ -3,6 +3,8 @@
 @use './component/Admin/login';
 @use './component/Admin/navbar';
 @use './component/Admin/sidebar';
+@use './component/Admin/media';
+
 
 .img-profile {
     @include mixin.defaultWidthHeight();

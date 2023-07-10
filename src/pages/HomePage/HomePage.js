@@ -31,7 +31,7 @@ const HomePage = () => {
     InitScripts();
 
     return (
-        <>
+        <div id='main-page'>
             {/* <Test2 data={dataTopBar} /> */}
             <TopBar data={dataTopBar} />
             <NavBar />
@@ -45,7 +45,7 @@ const HomePage = () => {
             <OurTeams data={dataTeams} />
             <ContactUs />
             <Footer />
-        </>
+        </div>
 
 
 

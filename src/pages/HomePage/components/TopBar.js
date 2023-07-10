@@ -13,9 +13,9 @@ const iconMap = {
 
 const TopBar = (dataJson) => {
     return (
-        <section id='top-bar' className='d-lg-flex d-md-none '>
+        <section id='top-bar'>
             <Container fluid>
-                <Container fluid='lg'>
+                <Container>
                     <Row >
                         <Col className='contact-info'>
                             <span><FontAwesomeIcon icon={faEnvelope} /><a href='https://google.com'>contact@example.com</a></span>

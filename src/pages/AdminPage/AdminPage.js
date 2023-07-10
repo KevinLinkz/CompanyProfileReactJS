@@ -8,7 +8,8 @@ import { Container } from 'react-bootstrap'
 const AdminPage = () => {
     return (
         <section id='login'>
-            <Container fluid className='background'>
+
+            <Container fluid className='background' >
                 <Container className='layout'>
                     <NavBar />
                     <SideBar />
