@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Container, Form, Nav, NavDropdown, Navbar } from 'react-bootstrap'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { BiSolidEnvelope } from 'react-icons/bi'
@@ -7,40 +7,54 @@ import { IoMdNotifications } from 'react-icons/io'
 import imgProfile from './assets/profile.jpg'
 
 const NavBar = () => {
-    const [toggleSideBar, setToggleSideBar] = useState(true)
+    const [toggleSideBar, setToggleSideBar] = useState(false)
 
     const handleSideBar = () => {
-
+        setToggleSideBar(current => !current);
+    }
+    const handleResize = useCallback(() => {
         const sectionSideBar = document.getElementById('sidebar');
         const sectionLayout = document.getElementsByClassName('layout');
         const widthSidebar = parseFloat(getComputedStyle(sectionSideBar).width);
         const marginLeftLayout = parseFloat(getComputedStyle(sectionLayout[0]).getPropertyValue('margin-left'), 10);
-        setToggleSideBar(!toggleSideBar)
+
         if (toggleSideBar) {
-            if (widthSidebar > marginLeftLayout)
-                sectionLayout[0].style.paddingLeft = ((widthSidebar - marginLeftLayout - 13)) + "px";
-            sectionSideBar.style.transform = 'translateX(0%)';
+            if (window.innerWidth > 768) {
+                if (widthSidebar > marginLeftLayout)
+                    sectionLayout[0].style.paddingLeft = ((Math.abs(widthSidebar - marginLeftLayout))) + "px";
+                sectionSideBar.style.transform = 'translateX(0%)';
+            } else {
+                sectionLayout[0].style.paddingLeft = 0;
+                sectionSideBar.style.transform = 'translateX(0%)';
+            }
         }
         else {
             sectionLayout[0].style.paddingLeft = 0;
             sectionSideBar.style.transform = 'translateX(-100%)';
         }
-    }
-    // window.addEventListener('resize', function() {
-    //     // Check for changes in zoom level
-    //     if (window.innerWidth !== window.outerWidth) {
-    //       // Zoom level has changed
-    //       // Your code here...
-    //     }
-    //   });
+
+    }, [toggleSideBar])
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, [handleResize])
+
+    useEffect(() => {
+        handleResize();
+    }, [handleResize]);
+
     return (
         <section id='navbar-admin'>
             <Navbar expanded={true} className='navbar-contents'>
                 <Container>
                     <Navbar.Brand>
+                        <a href='/'><h1>#</h1></a>
                         <div className='icon-background' onClick={handleSideBar}><GiHamburgerMenu></GiHamburgerMenu></div>
                         <Form.Group controlId="searchInput">
-                            <Form.Control type="search" placeholder="Search" />
+                            <Form.Control className='nav-search' type="search" placeholder="Search" />
                         </Form.Group>
                     </Navbar.Brand>
 

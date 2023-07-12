@@ -3,22 +3,20 @@
 
 
 #sidebar {
-    @include mixin.defaultWidthHeight(15.6em, 100vh);
+    @include mixin.defaultWidthHeight(15.6em, 100%);
     position: absolute;
     top: 0;
     left: 0;
     transform: translateX(-100%);
-    // left: -(variables.$widthSidebar);
     transition: transform 1s ease;
     background-color: variables.$grayBackgroundAdmin;
-    border: 1px solid red;
-
 
     .container {
         @include mixin.defaultWidthHeight();
         display: flex;
         flex-direction: column;
         padding: 20px;
+
 
         a {
             text-decoration: none;

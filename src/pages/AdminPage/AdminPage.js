@@ -2,6 +2,7 @@ import '../../style/mainStyleAdmin.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar'
 import SideBar from './components/SideBar'
+import MainContent from './components/MainContent'
 
 import React from 'react'
 import { Container } from 'react-bootstrap'
@@ -13,6 +14,8 @@ const AdminPage = () => {
                 <Container className='layout'>
                     <NavBar />
                     <SideBar />
+                    {/* <MainContent /> */}
+
 
                 </Container>
             </Container>

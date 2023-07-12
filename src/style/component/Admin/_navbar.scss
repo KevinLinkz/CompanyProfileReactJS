@@ -6,6 +6,10 @@
     width: 100%;
     font-family: variables.$primaryFontFamilyAdmin;
 
+    .container {
+        padding: 0;
+    }
+
     .navbar-contents {
         @include mixin.positionDisplay(flex, center, center);
         height: 4.5em;
@@ -14,6 +18,20 @@
         .navbar-brand {
             @include mixin.positionDisplay(flex, center, center);
             margin-left: 10px;
+            margin-right: 0px;
+
+            a {
+                text-decoration: none;
+            }
+
+            h1 {
+                font-size: 40px;
+                font-weight: 600;
+                margin: 0 15px 0 0;
+                color: variables.$blueColorAdmin;
+                display: none;
+                cursor: pointer;
+            }
 
             svg {
                 color: variables.$blueColorAdmin;
@@ -39,8 +57,6 @@
 
         }
 
-
-
         .item {
             display: flex;
             justify-content: flex-end;
@@ -65,7 +81,6 @@
 
 
             .dropdown-messages {
-
                 .dropdown-item {
                     display: flex;
                     border-bottom: 1px solid variables.$grayDarkerBorder;

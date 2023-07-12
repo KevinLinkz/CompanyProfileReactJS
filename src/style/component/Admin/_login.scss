@@ -9,7 +9,9 @@
     box-sizing: border-box;
     overflow: hidden;
 
-    .layout.layout-transform {}
+    .background {
+        padding: 0;
+    }
 
     .layout {
         @include mixin.defaultWidthHeight(100%, 100vh);

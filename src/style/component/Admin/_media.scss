@@ -1,16 +1,7 @@
 #login {
-
-    @media (min-width: 576px) {
-        .container {
-            max-width: 540px;
-        }
-
-
-    }
-
-    @media (min-width: 768px) {
-        .container {
-            max-width: 720px;
+    @media (max-width: 600px) {
+        #searchInput {
+            display: none;
         }
     }
 
@@ -20,8 +11,45 @@
             overflow: hidden;
         }
 
+        #sidebar {
+            height: calc(100vh - 72px);
+            top: 72px;
+            overflow: scroll;
+
+            .container {
+                padding-top: 0;
+            }
+
+            h2 {
+                display: none;
+            }
+        }
+
+
         .navbar-contents {
+            .navbar-brand {
+                h1 {
+                    display: flex;
+                }
+            }
+
             .item {
+                .dropdown-messages {
+                    .nav-link {
+                        padding-right: 0;
+
+                    }
+                }
+
+                .dropdown-notifications {
+                    .nav-link {
+                        padding-right: 0;
+
+                    }
+                }
+
+
+
                 .icon-background {
                     margin-right: 0px;
 
@@ -31,19 +59,11 @@
         }
     }
 
-    @media (min-width: 992px) {
+
+    @media (max-width: 1024px) {
         .container {
-            max-width: 960px;
+            max-width: 1024px;
         }
-
-    }
-
-    @media (min-width: 1200px) {
-        .container {
-            max-width: 1140px;
-        }
-
-
     }
 
     @media (min-width: 1400px) {

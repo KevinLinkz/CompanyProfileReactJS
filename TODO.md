@@ -7,20 +7,20 @@ Project Description
 ### Todo
 
 - [ ] Make main layour for admin, background and layout will in one class, and another class will render by menu.  
-- [ ] #DASHMIN will change # if smaller media  
-- [ ] disappear navbar item span when smaller media  
-- [ ] change every media in admin side  
 - [ ] Make page not found  
 
 ### In Progress
 
-- [ ] Make admin site  
 
 ### Stages ✓
 
 
 ### Done ✓
 
+- [x] change every media in admin side  
+- [x] disappear navbar item span when smaller media  
+- [x] #DASHMIN will change # if smaller media  
+- [x] Make admin site  
 - [x] change css into sass  
 - [x] Move file into structure  
 - [x] customization breakpoints bootstrap  

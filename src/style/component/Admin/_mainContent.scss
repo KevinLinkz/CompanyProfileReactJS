@@ -1,0 +1,22 @@
+@use '../variables';
+@use '../mixin';
+
+#main-content {
+    @include mixin.defaultWidthHeight(100%, 100%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-star;
+
+    .top-bar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid black;
+    }
+
+    .row {
+        margin: 10px;
+    }
+
+}
